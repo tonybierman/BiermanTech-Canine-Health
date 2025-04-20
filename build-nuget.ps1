@@ -21,6 +21,12 @@ dotnet build BiermanTech-Canine-Health.sln --configuration Debug
 Write-Host "Packing BiermanTech.CanineHealth..."
 dotnet pack BiermanTech.CanineHealth --configuration Debug --output $NuGetDirectory /p:Version=$Version
 
+Write-Host "Running tests..."
+dotnet test BiermanTech.CanineHealth.Tests --configuration Debug --collect:"XPlat Code Coverage" --results-directory $CoverageReport
+
+Write-Host "Generating coverage report..."
+reportgenerator -reports:$CoverageReport/**/*.cobertura.xml -targetdir:$CoverageReport/html -reporttypes:Cobertura
+
 Write-Host "NuGet Packages are ready in: $NuGetDirectory"
 Write-Host "Coverage report is available in: $CoverageReport/html"
 
