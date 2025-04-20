@@ -38,7 +38,7 @@
 		<PackageId>BiermanTech.CanineHealth</PackageId>
 		<Authors>Tony Bierman</Authors>
 		<Description>A C# class library developed to support canine health management applications.</Description>
-		<PackageProjectUrl>http://www.tonybierman.com/canine-health/</PackageProjectUrl>
+		<PackageProjectUrl>http://www.tonybierman.com/</PackageProjectUrl>
 		<PackageTags>
 			canine health, C#, BiermanTech, veterinary tools, genetic health, pet care
 		</PackageTags>
