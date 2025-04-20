@@ -50,7 +50,7 @@ jobs:
       run: dotnet build BiermanTech.CanineHealth --configuration Release
 
     - name: Pack BiermanTech.CanineHealth
-      run: dotnet BiermanTech.CanineHealth --configuration Release --output ${{ env.NuGetDirectory }}
+      run: dotnet pack BiermanTech.CanineHealth --configuration Release --output ${{ env.NuGetDirectory }}
 
     # 🔍 Debug: List NuGet Packages
     - name: Debug - List NuGet Files
